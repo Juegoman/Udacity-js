@@ -1,0 +1,22 @@
+body {
+  background-color: black;
+  color: green;
+  text-align: center;
+  font-family: "Courier New", monospace;
+  max-width: 640px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 1.5em;
+}
+
+h2 {
+  font-size: 1em;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
