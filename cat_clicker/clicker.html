@@ -7,8 +7,19 @@
   </head>
   <body>
     <h1>Pepe clicker</h1>
+    <button id="open">Add/Edit a pepe</button>
+    <form class="hidden">
+      <label>Pepe name: </label><input type="text" id="name" value="">
+      <label>Pepe image URL: </label><input type="text" id="imgsrc" value="">
+      <button id="cancel">Cancel</button>
+      <button id="update">Update current pepe</button>
+      <button id="add">Add new pepe</button>
+    </form>
     <div class="row">
-      <div class="pepe-list"><div><h2>Pepe list</h2></div></div>
+      <div class="pepe-list-container">
+        <h2>Pepe list</h2>
+        <div class="pepe-list"></div>
+      </div>
       <div class="pepe-container">Select a pepe to meme.</div>
     </div>
     <script
