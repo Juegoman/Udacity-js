@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Pepe Clicker</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <h1>Pepe clicker</h1>
+    <div class="row">
+      <div class="pepe-list-container">
+        <h2>Pepe list</h2>
+        <div class="pepe-list" data-bind="foreach: pepeList">
+          <a href="#" data-bind="click: $parent.changePepe">
+            <span class="list-name" data-bind="text: name"></span>
+            <img alt="" src="" data-bind="attr: {src: image, alt: name}">
+          </a>
+        </div>
+      </div>
+      <div class="pepe-container" data-bind="with: currentPepe">
+        <span class="hidden">Select a pepe to meme.</span>
+        <div class="pepe">
+
+          <h2 class="name" data-bind="text: name"></h2>
+          <h3 class="title" data-bind="text: title"></h3>
+
+          <h3>
+            This pepe has been memed <span class="clicks" data-bind="text: clicks"></span> times.
+          </h3>
+
+          <img alt="" src="" data-bind="click: $parent.incrementCounter, attr: {src: image, alt: name}">
+
+          <p>Pepe's inventory:
+            <ul class="accessories" data-bind="foreach: accessories">
+              <li data-bind="text: accessory"></li>
+            </ul>
+          </p>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.1.0.min.js"
+        integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
+        crossorigin="anonymous"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
